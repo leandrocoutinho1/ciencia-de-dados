@@ -1,0 +1,45 @@
+# Instruções para execução do código de amostragem sem reposição
+
+Este programa realiza amostragem aleatória sem reposição a partir de um arquivo .csv,
+gerando um novo arquivo com o número de amostras especificado.
+
+## 1. Pré-requisitos
+
+- Python 3 instalado
+- Arquivo requirements.txt com as dependências
+
+Instale as dependências com o comando:
+
+    pip install -r requirements.txt
+
+## 2. Estrutura esperada
+
+O projeto deve conter uma função chamada `amostragem_sem_reposicao`, com os seguintes parâmetros:
+
+    - input_csv (str): caminho do arquivo .csv de entrada
+    - output_csv (str): caminho do arquivo .csv de saída
+    - tamanho_amostra (int): número de registros a serem amostrados
+    - random_state (int, opcional): semente para reprodutibilidade
+
+
+## 3. Resultado
+
+O programa irá:
+
+- Ler o arquivo `data/input/student-mat.csv`
+- Selecionar 50 registros aleatórios (sem repetição)
+- Gerar o arquivo `data/output/amostra-student-mat.csv`
+
+## 4. Observações
+
+- O parâmetro `random_state` é opcional. Ele garante que a amostragem seja reprodutível.
+- O parâmetro `tamanho_amostra` deve ser menor ou igual ao número de registros da base.
+- O nome do arquivo de saída é gerado automaticamente com o prefixo "amostra-".
+
+## 5. Link da base de dados utilizada
+
+https://archive.ics.uci.edu/dataset/320/student+performance
+
+## 6. Exemplo de execução
+
+    python main.py
